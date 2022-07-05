@@ -22,6 +22,10 @@ body{
     border-radius: 10px;
 }
 
+.slider .img-fluid{
+    transition: 0.2s;
+}
+
 .slider button{
     background-color: transparent;
     position: absolute;
@@ -57,4 +61,8 @@ background-color: rgba(0, 0, 0, 0.5);
 
 .slider i:hover{
     background-color: rgba(255, 255, 255, 0.7);
+}
+
+.fade-out{
+    opacity: 0;
 }

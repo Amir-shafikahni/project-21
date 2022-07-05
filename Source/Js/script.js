@@ -32,6 +32,8 @@ function nextImg(){
         index = 0
     }
 
+    changeImgAnimation()
+
     imgElem.src = allImgSrc[index]
 }
 
@@ -43,7 +45,16 @@ function prevImg (){
        index = allImgSrc.length - 1
     }
 
+    changeImgAnimation()
+
     imgElem.src = allImgSrc[index]
+}
+
+function changeImgAnimation(){
+    imgElem.classList.add("fade-out")
+    setInterval(function(){
+        imgElem.classList.remove("fade-out")
+    },300)
 }
 
 // event listeners //////////
