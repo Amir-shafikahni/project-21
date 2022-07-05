@@ -4,7 +4,7 @@ let $ = document
 
 // variables //////////////
 const body = $.body
-const imgElem = $.querySelector("img")
+const imgElem = $.querySelector(".img-fluid")
 const nextBtn = $.querySelector(".fa-angles-right")
 const prevBtn = $.querySelector(".fa-angles-left")
 
@@ -32,10 +32,8 @@ function nextImg(){
         index = 0
     }
 
-    changeImgAnimation()
-
-    imgElem.src = allImgSrc[index]
-}
+    changeImg(index)
+} 
 
 // to move to the previous img by clicking on prev button
 function prevImg (){   
@@ -45,20 +43,20 @@ function prevImg (){
        index = allImgSrc.length - 1
     }
 
-    changeImgAnimation()
-
-    imgElem.src = allImgSrc[index]
+    changeImg(index)
 }
 
-function changeImgAnimation(){
+// changing background animation
+function changeImg(srcIndex){
     imgElem.classList.add("fade-out")
-    setInterval(function(){
+    setTimeout(function(){
         imgElem.classList.remove("fade-out")
-    },300)
+    },150)    
+    imgElem.src = allImgSrc[srcIndex]
 }
 
 // event listeners //////////
 setInterval(liveUserScreenMinHeight, 100)
-setInterval(nextImg , 4000)
+setInterval(nextImg , 5000)
 nextBtn.addEventListener("click" , nextImg)
 prevBtn.addEventListener("click" , prevImg)

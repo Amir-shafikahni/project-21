@@ -17,24 +17,29 @@ body{
 }
 
 .slider{
-    overflow: hidden;
-    position: relative;
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
 }
 
-.slider .img-fluid{
-    transition: 0.2s;
+.img-container{
+    overflow: hidden;
+}
+
+.img-container img{
+    transition: 0.15s;
 }
 
 .slider button{
     background-color: transparent;
     position: absolute;
     padding: 0px 8px;
-    height: 100%;
     border: none;
     cursor: auto;
-    z-index: 10;
-    transition: 0.4s;
+    height: 100%;
+    top: 0;
+    transition: 0.3s;
 }
 
 .slider button:nth-child(2){
@@ -48,19 +53,19 @@ body{
 }
 
 .slider button:hover{
-background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.slider i {
-    background-color: rgba(255, 255, 255, 0.5);
+.slider i{
+    background-color: rgba(255, 255, 255 , 0.5);
     border-radius: 50%;
     cursor: pointer;
     padding: 10px;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .slider i:hover{
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255 , 0.8);
 }
 
 .fade-out{
