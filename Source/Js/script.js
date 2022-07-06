@@ -36,7 +36,7 @@ function prevImage (){
     carouselSlide.style.transform = "translateX(" + -size * counter  + "px)" 
 }
 
-// to make a loop for the carousel
+// to make an infinite loop for the carousel
 function stayInCarouselLoop (){
     if(carouselImages[counter].id === "lastClone"){
         carouselSlide.style.transition = 'none'
